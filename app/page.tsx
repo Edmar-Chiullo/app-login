@@ -31,7 +31,7 @@ export default function Login() {
   })
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    const user = getUser(values)
+    const user = getUser()
 
     user.then((users) => {
       users.map(user => {
@@ -71,7 +71,7 @@ export default function Login() {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input type="password" placeholder="Password" {...field} />
+                  <Input placeholder="Password" {...field} />
                 </FormControl>
                 <FormDescription></FormDescription>
                 <FormMessage />

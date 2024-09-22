@@ -42,7 +42,7 @@ export const createUser = (values: userProps) => {
 }
 
 
-export const getUser = (values: userProps) => {
+export const getUser = () => {
     const user = get()
     .then(async (user) => {
       await prisma.$disconnect()
